@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do list</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div id="mainBox">
+        <h1>My tasks</h1>
+            <form onsubmit="AddNote(); return false;">
+                <div class="InputDiv" id="InputNote">
+                    <div class="red_row"></div>
+                    <div class="blue_row"></div>
+                    <div class="empty_row"></div>
+                    <div class="blue_row"></div>
+                    <div>
+                        <label for="TDetails">Task details</label>
+                        <input type="text" placeholder="Task details" id="TDetails">
+                    </div>
+                    <div class="blue_row"></div>
+                    <div>
+                        <label for="TDate">Task Do Date</label>
+                        <input type="date" id="TDate"> 
+                    </div>
+                    <div class="blue_row"></div>
+                    <div>
+                        <label for="TTime">Task Do Time</label>
+                        <input type="time" id="TTime">
+                    </div>
+                    <div class="blue_row"></div>
+                    <div class="empty_row"></div>
+                    <div class="blue_row"></div>
+                    <div class="NoteBtnBox"> 
+                        <button type="submit">add</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                    <div class="blue_row"></div>
+                </div>
+            </form>
+            <div id="notesBox">
+            </div>
+            <div id="alertBox" class="allertBox hiddenAllert">
+                <span id="alertBoxText"></span>
+                <button id="alertBoxBtn" onclick="closeAllert()">Ok</button>
+            </div>
+    </div>
+</body>
+</html>

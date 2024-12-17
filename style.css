@@ -1,0 +1,196 @@
+@font-face {
+    font-family: myFont;
+    src: url(assets/fonts/Raleway-Regular.ttf);
+}
+@font-face {
+    font-family: h1fONT;
+    src: url(assets/fonts/Rockybilly.ttf)
+}
+@keyframes fade-in{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: myFont;
+}
+#mainBox{
+    width: 100%;
+    background-image: url(assets/pictures/background.jpeg);
+    padding-bottom: 10vh;
+    background-size: 80%;
+    overflow: visible;
+}
+h1{
+    font-family: h1fONT;
+    font-weight: bold;
+    font-size: 5vh;
+    text-align: center;
+}
+.InputDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    height:43vh ;
+    color: #094B60;
+    position: relative;
+    background-color: #fbffd5;
+    font-size: 2vh;
+}
+.InputDiv div{
+    display: flex;
+    align-items: center;
+    width: 75%;
+}
+form{
+    display: flex;
+    justify-content: center;
+}
+.InputDiv label{
+    width: 20%;
+}
+.InputDiv input{
+    font-size: 2vh;
+    width: 80%;
+    height: 4vh;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 1px #094B60 solid;
+    padding-left: 2%;
+    margin-left: 5%;
+}
+.InputDiv input:focus{
+    outline: 2px #094B60 solid;
+}
+.NoteBtnBox{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.InputDiv button{
+    background-color: #094B60;
+    font-size: 2vh;
+    color: aliceblue;
+    border-radius: 20px;
+    padding-right: 2% ;
+    padding-left: 2% ;
+    cursor: pointer;
+    height: 5vh;
+}
+.InputDiv button:hover{
+    background-color: #1B738E;
+}
+.red_row{
+    max-width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    inset-inline-start: 10%;
+    border: #EA4800 2px solid;
+}
+.blue_row{
+    max-height: 0;
+    min-width: 100%;
+    border: #5c77f3 1px solid;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+.empty_row{
+    min-height: 4vh;
+}
+.allertBox{
+    width: 40%;
+    height: 30%;
+    position: fixed;
+    top: 10%;
+    inset-inline-start: 30%;
+    z-index: 10;
+    border: #EA4800 2px solid;
+    border-radius: 20px;
+    background-color: #e6e19e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 500ms linear, height 500ms linear;
+    button{
+        background-color: #094B60;
+        color: aliceblue;
+        border-radius: 20px;
+        padding: 2% 10%;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: #1B738E;
+    }
+}
+.hiddenAllert{
+    opacity: 0;
+    max-height: 0;
+    pointer-events: none;
+}
+#notesBox{
+    margin-top: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.Note{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vw;
+    height:43vh ;
+    gap: 2vh;
+    color: #094B60;
+    background-color: #e3c572;
+    border-radius: 10px;
+    margin-top: 10vh;
+    animation: fade-in 1s linear;
+}
+.thumbBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline-end: 1%;
+}
+.thumb{
+    width: 20%;
+}
+.hiddenBtn{
+    background:none;
+    border: none;
+    height: 100%;
+    width: 20%;
+    font-size: 5vh;
+    text-align: center;
+    color: #EA4800;
+    opacity: 0;
+    transition: opacity 200ms linear;
+    cursor: pointer;
+}
+.Note:hover .hiddenBtn{
+    opacity: 1;
+}
+.TDetails{
+    height: 50%;
+}
+.AppedTDetails{
+    overflow-y: auto;
+    padding: 1%;
+    height: 100%;
+}
+.TFooter{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-inline-start: 5%;
+    gap: 3px;
+}
