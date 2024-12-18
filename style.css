@@ -17,9 +17,12 @@
 }
 html,body{
     font-family: myFont;
+    width: 100%;
+    height: 100%;
 }
 #mainBox{
     width: 100%;
+    min-height: 100%;
     background-image: url(assets/pictures/background.jpeg);
     padding-bottom: 10vh;
     background-size: 80%;
