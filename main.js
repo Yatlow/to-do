@@ -42,7 +42,7 @@ function addNoteData(){
     idCounter++;
     notes.push(note);
     updateData();
-    clearForm();
+    document.getElementById("inputForm").reset();
 }
 
 function updateData(){
@@ -86,12 +86,6 @@ function appendNotes(){
     houseOfCards.innerHTML = string;
 }
 
-function clearForm(){
-    TaskDetailsBox.value = "";
-    TaskDateBox.value = "";
-    TaskTimeBox.value = "";
-}
-
 function deleteNote(uid){
     const alertBox = document.getElementById("alertBox");
     const alertBoxText = document.getElementById("alertBoxText");
@@ -99,7 +93,7 @@ function deleteNote(uid){
     const alertBoxConfirmBtn = document.getElementById("alertBoxConfirmBtn");
     for (let i = 0; i < notes.length; i++){
         if (notes[i].idCounter === uid){
-            alertBoxText.innerHTML = "are you sure you want to delete the task"
+            alertBoxText.innerHTML = `are you sure you want to delete the task ${notes[i].details}?`
             alertBox.classList.remove("hiddenAlert");
             alertBoxConfirmBtn.classList.remove("hiddenConfirmBtn")
             alertBoxBtn.innerHTML = "cancel";

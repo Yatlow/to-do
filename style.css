@@ -136,6 +136,10 @@ form{
         background-color: #1B738E;
     }
 }
+#alertBoxText{
+    max-height: 40%;
+    overflow-y: auto;
+}
 .hiddenAlert{
     display: none;
     opacity: 0;
