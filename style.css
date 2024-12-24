@@ -3,7 +3,7 @@
     src: url(assets/fonts/Raleway-Regular.ttf);
 }
 @font-face {
-    font-family: h1fONT;
+    font-family: h1Font;
     src: url(assets/fonts/Rockybilly.ttf)
 }
 @keyframes fade-in{
@@ -29,12 +29,12 @@ html,body{
     overflow: visible;
 }
 h1{
-    font-family: h1fONT;
+    font-family: h1Font;
     font-weight: bold;
     font-size: 5vh;
     text-align: center;
 }
-.InputDiv{
+.inputDiv{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,7 +45,7 @@ h1{
     background-color: #fbffd5;
     font-size: 2vh;
 }
-.InputDiv div{
+.inputDiv div{
     display: flex;
     align-items: center;
     width: 75%;
@@ -57,10 +57,10 @@ form{
     display: flex;
     justify-content: center;
 }
-.InputDiv label{
+.inputDiv label{
     width: 20%;
 }
-.InputDiv input{
+.inputDiv input{
     font-size: 2vh;
     width: 80%;
     height: 4vh;
@@ -70,15 +70,15 @@ form{
     padding-left: 2%;
     margin-left: 5%;
 }
-.InputDiv input:focus{
+.inputDiv input:focus{
     outline: 2px #094B60 solid;
 }
-.NoteBtnBox{
+.noteBtnBox{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
-.InputDiv button{
+.inputDiv button{
     background-color: #094B60;
     font-size: 2vh;
     color: aliceblue;
@@ -88,10 +88,10 @@ form{
     cursor: pointer;
     height: 5vh;
 }
-.InputDiv button:hover{
+.inputDiv button:hover{
     background-color: #1B738E;
 }
-.red_row{
+.redRow{
     max-width: 0;
     height: 100%;
     position: absolute;
@@ -99,17 +99,17 @@ form{
     inset-inline-start: 10%;
     border: #EA4800 2px solid;
 }
-.blue_row{
+.blueRow{
     max-height: 0;
     min-width: 100%;
     border: #5c77f3 1px solid;
     margin-top: 1vh;
     margin-bottom: 1vh;
 }
-.empty_row{
+.emptyRow{
     min-height: 4vh;
 }
-.allertBox{
+.alertBox{
     width: 40%;
     height: 30%;
     position: fixed;
@@ -136,7 +136,7 @@ form{
         background-color: #1B738E;
     }
 }
-.hiddenAllert{
+.hiddenAlert{
     display: none;
     opacity: 0;
     max-height: 0;
@@ -148,7 +148,7 @@ form{
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.Note{
+.note{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -182,20 +182,20 @@ form{
     transition: opacity 200ms linear;
     cursor: pointer;
 }
-.Note:hover .hiddenBtn{
+.note:hover .hiddenBtn{
     opacity: 1;
 }
-.TDetails{
+.taskDetails{
     height: 50%;
     width: 90%;
     overflow-y: auto;
 }
-.AppedTDetails{
+.AppendedTaskDetails{
     padding: 1%;
     height: 100%;
     width: 100%;
 }
-.TFooter{
+.TaskFooter{
     width: 95%;
     display: flex;
     flex-direction: column;
@@ -206,4 +206,7 @@ form{
 .overdo{
     color: red;
     animation: fade-in 1s ease-in-out infinite;
+}
+.hiddenConfirmBtn{
+    display: none;
 }

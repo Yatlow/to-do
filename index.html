@@ -13,40 +13,41 @@
     <div id="mainBox">
         <h1>My tasks</h1>
             <form onsubmit="addNote(); return false;">
-                <div class="InputDiv" id="InputNote">
-                    <div class="red_row"></div>
-                    <div class="blue_row"></div>
-                    <div class="empty_row"></div>
-                    <div class="blue_row"></div>
+                <div class="inputDiv" id="InputNote">
+                    <div class="redRow"></div>
+                    <div class="blueRow"></div>
+                    <div class="emptyRow"></div>
+                    <div class="blueRow"></div>
                     <div class="inputRow">
                         <label for="taskDetailsBox">Task details</label>
                         <input type="text" placeholder="Task Details" id="taskDetailsBox">
                     </div>
-                    <div class="blue_row"></div>
+                    <div class="blueRow"></div>
                     <div class="inputRow">
                         <label for="taskDateBox">Task Do Date</label>
                         <input type="date" id="taskDateBox"> 
                     </div>
-                    <div class="blue_row"></div>
+                    <div class="blueRow"></div>
                     <div class="inputRow">
                         <label for="taskTimeBox">Task Do Time</label>
                         <input type="time" id="taskTimeBox">
                     </div>
-                    <div class="blue_row"></div>
-                    <div class="empty_row"></div>
-                    <div class="blue_row"></div>
-                    <div class="NoteBtnBox inputRow"> 
+                    <div class="blueRow"></div>
+                    <div class="emptyRow"></div>
+                    <div class="blueRow"></div>
+                    <div class="noteBtnBox inputRow"> 
                         <button type="submit">add</button>
                         <button type="reset">Reset</button>
                     </div>
-                    <div class="blue_row"></div>
+                    <div class="blueRow"></div>
                 </div>
             </form>
             <div id="houseOfCards">
             </div>
-            <div id="alertBox" class="allertBox hiddenAllert">
+            <div id="alertBox" class="alertBox hiddenAlert">
                 <span id="alertBoxText"></span>
-                <button id="alertBoxBtn" onclick="closeAlert()">Ok</button>
+                <button id="alertBoxConfirmBtn" class="hiddenConfirmBtn">Ok</button>
+                <button id="alertBoxBtn">Ok</button>
             </div>
     </div>
 </body>
